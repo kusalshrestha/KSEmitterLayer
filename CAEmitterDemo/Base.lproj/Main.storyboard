@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CAEmitterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Density" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZW-py-YBe">
+                                <rect key="frame" x="20" y="102" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="wYc-Vd-E7B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="g30-vs-pMl">
+                                <rect key="frame" x="111" y="98" width="471" height="31"/>
+                                <connections>
+                                    <action selector="DensityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bcN-G9-7Fu"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="7F3-Fz-orm">
+                                <rect key="frame" x="114" y="60" width="468" height="31"/>
+                                <connections>
+                                    <action selector="VelocityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="A1m-nd-6Cf"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="quw-gT-J0K">
+                                <rect key="frame" x="20" y="20" width="560" height="29"/>
+                                <segments>
+                                    <segment title="Blast"/>
+                                    <segment title="Vertical"/>
+                                    <segment title="Left"/>
+                                    <segment title="Right"/>
+                                </segments>
+                                <connections>
+                                    <action selector="emissionTypeSelection:" destination="BYZ-38-t0r" eventType="valueChanged" id="gFA-RI-hwJ"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velocity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0I-dh-87w">
+                                <rect key="frame" x="20" y="64" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="SgT-7E-qwu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8g-Bn-DgX">
+                                <rect key="frame" x="20" y="136" width="560" height="464"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g30-vs-pMl" firstAttribute="leading" secondItem="wZW-py-YBe" secondAttribute="trailing" constant="18" id="0dg-MP-Uod"/>
+                            <constraint firstItem="wZW-py-YBe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="16W-WI-3qM"/>
+                            <constraint firstItem="7F3-Fz-orm" firstAttribute="top" secondItem="quw-gT-J0K" secondAttribute="bottom" constant="12" id="6Qi-xK-sI9"/>
+                            <constraint firstItem="quw-gT-J0K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ar7-h1-ql1"/>
+                            <constraint firstItem="J0I-dh-87w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Eze-wy-oFg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="quw-gT-J0K" secondAttribute="trailing" id="Hf1-Ed-GoK"/>
+                            <constraint firstItem="g30-vs-pMl" firstAttribute="top" secondItem="7F3-Fz-orm" secondAttribute="bottom" constant="8" id="HnZ-ix-CT2"/>
+                            <constraint firstItem="J0I-dh-87w" firstAttribute="top" secondItem="quw-gT-J0K" secondAttribute="bottom" constant="16" id="I5j-Tn-eUX"/>
+                            <constraint firstItem="B8g-Bn-DgX" firstAttribute="top" secondItem="g30-vs-pMl" secondAttribute="bottom" constant="8" id="Ilz-d1-A6g"/>
+                            <constraint firstItem="g30-vs-pMl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="N1j-XN-fwt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B8g-Bn-DgX" secondAttribute="bottom" id="T2a-mh-DnH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B8g-Bn-DgX" secondAttribute="trailing" id="cff-Wk-yI0"/>
+                            <constraint firstItem="quw-gT-J0K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hmq-r3-gZ7"/>
+                            <constraint firstItem="wZW-py-YBe" firstAttribute="top" secondItem="J0I-dh-87w" secondAttribute="bottom" constant="17" id="iYy-U9-VPc"/>
+                            <constraint firstItem="7F3-Fz-orm" firstAttribute="leading" secondItem="J0I-dh-87w" secondAttribute="trailing" constant="21" id="qDH-Th-iwn"/>
+                            <constraint firstItem="7F3-Fz-orm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rgd-Es-A6Z"/>
+                            <constraint firstItem="B8g-Bn-DgX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zHo-Sa-kwS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emitterPlayView" destination="B8g-Bn-DgX" id="zQB-GK-bkN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="292"/>
+        </scene>
+    </scenes>
+</document>

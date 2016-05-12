@@ -1,0 +1,10 @@
+framework module KSCAEmitter {
+  umbrella header "KSCAEmitter.h"
+
+  export *
+  module * { export * }
+}
+
+module KSCAEmitter.Swift {
+    header "KSCAEmitter-Swift.h"
+}
